@@ -31,13 +31,21 @@ h1 {
    color: white;
    font-size: 90px;
    font-weight: bolder;
+   letter-spacing: 3px;
    margin: 0;
 }
 
+.link-icon {
+  height: 70px;
+  width: auto;
+}
+
 input {
+  font-size: 40px;
   height: 60px;
-  font-size: 34px;
+  letter-spacing: 2px;
   text-align: left;
+  text-indent: 15px;
   width: 93%;
 }
 
