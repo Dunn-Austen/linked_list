@@ -5,9 +5,14 @@ class Bookmark {
     this.url = url;
     this.read = false
   }
-  
+
   toggleRead() {
-    // This method should be invoked when someone changes whether a Bookmark has been read or not
-    // This method should update the read property on the Bookmark
+    if (this.read === false) {
+      this.read = true;
+    }
+
+    if (this.read === true) {
+      this.read = false;
+    }
   }
 }

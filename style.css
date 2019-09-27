@@ -58,6 +58,7 @@ input {
   width: 94%;
 }
 
+/* Right section stylings, including dynamic cards */
 .section-right {
   background-color: #D0D8DD;
   width: 50%;
@@ -68,25 +69,49 @@ input {
   border: 2px solid #455a64;
   color: #455a64;
   height: 21%;
+  padding: 0;
   margin: 30px;
   width: 90%;
 }
 
-h2 {
-  font-size: 40px;
-  letter-spacing: 2px;
-  text-align: left;
+
+.card-header {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  margin-bottom: -15px;
   width: 90%;
 }
 
+h2 {
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin: 0;
+  width: 90%;
+}
+
+
 .card-middle {
+  align-items: center;
   border-bottom: 1px solid grey;
   border-top: 1px solid grey;
+  display: flex;
+  font-size: 26px;
+  justify-content: flex-start;
+  height: 45%;
+  text-align: center;
   width: 90%;
+}
+
+.read {
+  color: #F05A28;
 }
 
 .card-footer {
   display: flex;
+  font-size: 22px;
+  height: 25%;
   justify-content: space-between;
+  margin-bottom: -15px;
   width: 90%;
 }
