@@ -1,5 +1,7 @@
 // Global Variables
 var bookmarks = [];
+var bookmarkCounter = 0;
+var totalRead = 0;
 
 // EventListeners
 document.querySelector('.section-left').addEventListener('click', eventHandlerLeft);
@@ -71,6 +73,7 @@ function instantiateBookmark() {
   var urlValue = document.querySelector('.website-url').value;
   var bookmark = new Bookmark(Date.now(), titleValue, urlValue);
     bookmarks.unshift(bookmark);
+    bookmarkCounter++;
 }
 
 // Function for matching clicked card to its instance in the bookmarks array
@@ -87,6 +90,7 @@ function removeCard(event) {
   var currentId = findId();
     event.target.closest('.bookmark-card').remove();
     bookmarks.splice(bookmarks.indexOf(currentId), 1);
+    bookmarkCounter--;
 }
 
 // Function for invoking the toggleRead method on the instance representing the clicked card
