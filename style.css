@@ -9,6 +9,7 @@ main {
   height: 160vh;
 }
 
+/* Left section stylings */
 .section-left {
   align-items: center;
   background-color: #455a64;
@@ -74,7 +75,6 @@ input {
   width: 90%;
 }
 
-
 .card-header {
   display: flex;
   align-items: center;
@@ -89,7 +89,6 @@ h2 {
   margin: 0;
   width: 90%;
 }
-
 
 .card-middle {
   align-items: center;
@@ -114,4 +113,8 @@ h2 {
   justify-content: space-between;
   margin-bottom: -15px;
   width: 90%;
+}
+
+@media only screen and (max-width: px) {
+
 }

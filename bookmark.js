@@ -9,9 +9,7 @@ class Bookmark {
   toggleRead() {
     if (this.read === false) {
       this.read = true;
-    }
-
-    if (this.read === true) {
+    } else {
       this.read = false;
     }
   }
