@@ -23,10 +23,10 @@ function disableBtn() {
   var titleValue = document.querySelector('.website-title').value;
   var urlValue = document.querySelector('.website-url').value;
     if (titleValue.length && urlValue === 0 || urlValue.length === 0) {
-    document.querySelector('.enter-btn').disabled = true;
+      document.querySelector('.enter-btn').disabled = true;
 
     } else if (titleValue.length && urlValue != 0 || urlValue.length != 0) {
-      document.querySelector('.enter-btn').disabled = false;
+        document.querySelector('.enter-btn').disabled = false;
     }
 }
 
@@ -74,6 +74,7 @@ function instantiateBookmark() {
   var bookmark = new Bookmark(Date.now(), titleValue, urlValue);
     bookmarks.unshift(bookmark);
     bookmarkCounter++;
+    setInStorage(bookmark);
 }
 
 // Function for matching clicked card to its instance in the bookmarks array
@@ -107,4 +108,10 @@ function changeReadStyling() {
   } else {
     event.target.classList.add('read');
   }
+}
+
+// Function for storing card object 
+function setInStorage(bookmark) {
+  var storedString = JSON.stringify(bookmark);
+    window.localStorage.setItem(bookmarks[0].id, storedString);
 }
