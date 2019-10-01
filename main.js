@@ -91,7 +91,7 @@ function removeCard(event) {
     event.target.closest('.bookmark-card').remove();
     bookmarks.splice(bookmarks.indexOf(currentId), 1);
     bookmarkCounter--;
-    removeJustOneItemFromStorage()
+    localStorage.removeItem(currentId.id);
 }
 
 // Function for invoking the toggleRead method on the instance representing the clicked card
@@ -114,9 +114,4 @@ function changeReadStyling() {
 function setInStorage(bookmark) {
   var storedString = JSON.stringify(bookmark);
     window.localStorage.setItem(bookmarks[0].id, storedString);
-}
-
-function removeJustOneItemFromStorage() {
-  if (localStorage.length === 1);
-    localStorage.clear();
 }
