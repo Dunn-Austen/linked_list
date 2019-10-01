@@ -120,7 +120,7 @@ h2 {
   width: 90%;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 680px) {
   main {
     display: grid;
     height: 155vh;
