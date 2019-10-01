@@ -7,7 +7,6 @@ var totalRead = 0;
 document.querySelector('.section-left').addEventListener('click', eventHandlerLeft);
 document.querySelector('.section-right').addEventListener('click', eventHandlerRight);
 
-
 // Card generating function for eventListener on the left section
 function eventHandlerLeft(event) {
   event.preventDefault();
@@ -92,6 +91,7 @@ function removeCard(event) {
     event.target.closest('.bookmark-card').remove();
     bookmarks.splice(bookmarks.indexOf(currentId), 1);
     bookmarkCounter--;
+    removeFromStorage()
 }
 
 // Function for invoking the toggleRead method on the instance representing the clicked card
@@ -110,8 +110,24 @@ function changeReadStyling() {
   }
 }
 
-// Function for storing card object 
+// Function for storing card object
 function setInStorage(bookmark) {
   var storedString = JSON.stringify(bookmark);
     window.localStorage.setItem(bookmarks[0].id, storedString);
+}
+
+Failed function for deleting from localStorage
+function findIdForStorage() {
+  for (var i = 0; i < bookmarks.length; i++) {
+    if (event.target.dataset.id == bookmarks[i].id) {
+      console.log(bookmark[i].id);
+      return bookmarks[i].id;
+    }
+  }
+}
+
+function removeFromStorage(event) {
+  var targetObjectId = findIdForStorage();
+  // var storageKey = currentId.showIdForKey();
+    localStorage.removeItem(targetObjectId)
 }

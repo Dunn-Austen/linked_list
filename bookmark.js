@@ -15,4 +15,9 @@ class Bookmark {
       totalRead--;
     }
   }
+
+// Method for IDing localStorage key (dateNow ID)
+  showIdForKey() {
+    return this.id;
+  }
 }
